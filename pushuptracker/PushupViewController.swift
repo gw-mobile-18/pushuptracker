@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PushupViewController.swift
 //  pushuptracker
 //
 //  Created by Jared Alexander on 10/29/18.
@@ -8,17 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PushupViewController: UIViewController {
 
-    @IBOutlet weak var pushupRecordLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pushupRecordLabel.text = "HELLO WORLD"
-        
-        
-    }
-    
-}
+        print("we are on the 2nd screen!!")
 
+        // Do any additional setup after loading the view.
+    }
+}
