@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pushupRecordLabel.text = "HELLO WORLD"
+        //pushupRecordLabel.text = "HELLO WORLD"
         
         
     }
