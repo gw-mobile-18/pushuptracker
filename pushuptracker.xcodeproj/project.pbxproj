@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */; };
 		7F39082E2187D14F007BA344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39082D2187D14F007BA344 /* AppDelegate.swift */; };
 		7F3908302187D14F007BA344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39082F2187D14F007BA344 /* ViewController.swift */; };
 		7F3908332187D14F007BA344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3908312187D14F007BA344 /* Main.storyboard */; };
 		7F3908352187D151007BA344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3908342187D151007BA344 /* Assets.xcassets */; };
 		7F3908382187D151007BA344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3908362187D151007BA344 /* LaunchScreen.storyboard */; };
-		7F3908402187DCA4007BA344 /* PushupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39083F2187DCA4007BA344 /* PushupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushupTrackerViewController.swift; sourceTree = "<group>"; };
 		7F39082A2187D14F007BA344 /* pushuptracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushuptracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F39082D2187D14F007BA344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F39082F2187D14F007BA344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		7F3908342187D151007BA344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F3908372187D151007BA344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F3908392187D151007BA344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F39083F2187DCA4007BA344 /* PushupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		7F39082C2187D14F007BA344 /* pushuptracker */ = {
 			isa = PBXGroup;
 			children = (
+				7FA434DC21911D1600724C7E /* view controllers */,
 				7F39082D2187D14F007BA344 /* AppDelegate.swift */,
-				7F39082F2187D14F007BA344 /* ViewController.swift */,
 				7F3908312187D14F007BA344 /* Main.storyboard */,
 				7F3908342187D151007BA344 /* Assets.xcassets */,
 				7F3908362187D151007BA344 /* LaunchScreen.storyboard */,
 				7F3908392187D151007BA344 /* Info.plist */,
-				7F39083F2187DCA4007BA344 /* PushupViewController.swift */,
 			);
 			path = pushuptracker;
+			sourceTree = "<group>";
+		};
+		7FA434DC21911D1600724C7E /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F39082F2187D14F007BA344 /* ViewController.swift */,
+				7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */,
+			);
+			path = "view controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */,
 				7F3908302187D14F007BA344 /* ViewController.swift in Sources */,
 				7F39082E2187D14F007BA344 /* AppDelegate.swift in Sources */,
-				7F3908402187DCA4007BA344 /* PushupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

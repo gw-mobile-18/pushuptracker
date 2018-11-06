@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1841" y="502"/>
         </scene>
-        <!--Pushup View Controller-->
+        <!--Pushup Tracker View Controller-->
         <scene sceneID="I5L-Jv-FRO">
             <objects>
-                <viewController id="9Eb-na-iHh" customClass="PushupViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Eb-na-iHh" customClass="PushupTrackerViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iyx-gl-1hg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +118,9 @@
                                                 <state key="normal" title="Stop">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="9Eb-na-iHh" eventType="touchUpInside" id="UNa-Qj-e04"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,6 +138,9 @@
                                         <state key="normal" title="Tap Nose to Start">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="noseButtonPressed:" destination="9Eb-na-iHh" eventType="touchUpInside" id="gy1-9v-Dtw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -148,6 +154,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HL9-CL-poR"/>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="0GY-sz-HIQ" id="HSy-AZ-lA0"/>
+                        <outlet property="nameTextField" destination="xw0-VA-lfb" id="vFW-1n-Dny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgm-nx-Hhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
