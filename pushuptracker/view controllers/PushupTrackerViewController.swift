@@ -31,7 +31,8 @@ class PushupTrackerViewController: UIViewController {
         let name = nameTextField.text ?? "???"
         print("\(name) did \(count) pushup(s)")
         
-        //TODO: Persist this data
+        let workout = Workout(name: name, date: Date(), pushupsCompleted: count)
+        PersistenceManager.sharedInstance.saveWorkout(workout: workout)
         
         count = 0
     }

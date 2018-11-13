@@ -17,53 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bat-Wh-2fe">
-                                <rect key="frame" x="114.66666666666669" y="285.33333333333331" width="146" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Track Pushups">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9Eb-na-iHh" kind="show" id="ujb-Tc-F3s"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-EJ-tAc">
-                                <rect key="frame" x="125" y="335.33333333333331" width="125" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="View History">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYB-SW-sT1">
-                                <rect key="frame" x="134" y="385.33333333333331" width="107" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Find Gyms">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-JD-7d4">
-                                <rect key="frame" x="102.66666666666669" y="128" width="170" height="135.33333333333337"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pushup Record: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-Ps-jMu">
-                                <rect key="frame" x="102.66666666666669" y="464.33333333333331" width="170" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-JD-0zJ">
+                                <rect key="frame" x="102.66666666666669" y="208" width="170" height="396"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-JD-7d4">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="134"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bat-Wh-2fe">
+                                        <rect key="frame" x="12" y="135" width="146" height="69.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Track Pushups">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9Eb-na-iHh" kind="show" id="ujb-Tc-F3s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-EJ-tAc">
+                                        <rect key="frame" x="22.333333333333329" y="205.66666666666669" width="124.99999999999999" height="69.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="View History">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1sb-KS-fPx" kind="show" id="9GA-GT-UbQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYB-SW-sT1">
+                                        <rect key="frame" x="31.333333333333329" y="276.33333333333331" width="106.99999999999999" height="69.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Find Gyms">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pushup Record: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-Ps-jMu">
+                                        <rect key="frame" x="0.3333333333333286" y="347" width="169.33333333333337" height="49"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cAZ-JD-7d4" firstAttribute="height" secondItem="vY6-JD-0zJ" secondAttribute="height" multiplier="1:6" constant="68.111111111111157" id="HOf-A6-wJa"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.029716691043951218" blue="0.57306509067357514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mrr-Ps-jMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0eV-59-NZE"/>
-                            <constraint firstItem="BYB-SW-sT1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Edf-l7-ySS"/>
-                            <constraint firstItem="bat-Wh-2fe" firstAttribute="top" secondItem="cAZ-JD-7d4" secondAttribute="bottom" constant="22" id="HwL-9O-Z0N"/>
-                            <constraint firstItem="BYB-SW-sT1" firstAttribute="top" secondItem="eRr-EJ-tAc" secondAttribute="bottom" constant="10" id="J3m-cW-Rgw"/>
-                            <constraint firstItem="eRr-EJ-tAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KY2-Eb-yES"/>
-                            <constraint firstItem="eRr-EJ-tAc" firstAttribute="top" secondItem="bat-Wh-2fe" secondAttribute="bottom" constant="10" id="cjx-g3-MGB"/>
-                            <constraint firstItem="Mrr-Ps-jMu" firstAttribute="top" secondItem="BYB-SW-sT1" secondAttribute="bottom" constant="39" id="hjQ-Za-6FU"/>
-                            <constraint firstItem="cAZ-JD-7d4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="nvl-JN-XPw"/>
-                            <constraint firstItem="bat-Wh-2fe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="thj-O4-oq7"/>
-                            <constraint firstItem="cAZ-JD-7d4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:6" id="wFj-G9-cTZ"/>
-                            <constraint firstItem="cAZ-JD-7d4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yBs-cJ-DlF"/>
+                            <constraint firstItem="vY6-JD-0zJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Tf-WW-asq"/>
+                            <constraint firstItem="vY6-JD-0zJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uOx-Jw-ekD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -75,21 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="119"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Y7M-4z-n39">
-            <objects>
-                <viewController id="UjB-jJ-TiR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LxT-yT-TXi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bL4-5L-8ay"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XUV-Xz-kgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1841" y="502"/>
         </scene>
         <!--Pushup Tracker View Controller-->
         <scene sceneID="I5L-Jv-FRO">
@@ -162,6 +149,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgm-nx-Hhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1577" y="-279"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="oGD-Kg-jjE">
+            <objects>
+                <tableViewController id="1sb-KS-fPx" customClass="HistoryTableViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Bg-eh-36e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" id="ZjB-FE-4ZP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZjB-FE-4ZP" id="wyv-hx-2wz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1sb-KS-fPx" id="VNT-18-I9R"/>
+                            <outlet property="delegate" destination="1sb-KS-fPx" id="ZKo-8H-LRc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjh-Jg-dGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S1Y-I0-uNn">

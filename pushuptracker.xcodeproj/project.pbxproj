@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */; };
+		7F35DF6F219A4D1700391EF5 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF6E219A4D1700391EF5 /* Workout.swift */; };
+		7F35DF72219A4EAC00391EF5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */; };
+		7F35DF74219A5FDB00391EF5 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF73219A5FDB00391EF5 /* HistoryTableViewController.swift */; };
 		7F39082E2187D14F007BA344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39082D2187D14F007BA344 /* AppDelegate.swift */; };
 		7F3908302187D14F007BA344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39082F2187D14F007BA344 /* ViewController.swift */; };
 		7F3908332187D14F007BA344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3908312187D14F007BA344 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushupTrackerViewController.swift; sourceTree = "<group>"; };
+		7F35DF6E219A4D1700391EF5 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		7F35DF73219A5FDB00391EF5 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		7F39082A2187D14F007BA344 /* pushuptracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushuptracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F39082D2187D14F007BA344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F39082F2187D14F007BA344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F35DF6D219A4CF700391EF5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7F35DF6E219A4D1700391EF5 /* Workout.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		7F3908212187D14F007BA344 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +70,14 @@
 		7F39082C2187D14F007BA344 /* pushuptracker */ = {
 			isa = PBXGroup;
 			children = (
+				7F35DF6D219A4CF700391EF5 /* models */,
 				7FA434DC21911D1600724C7E /* view controllers */,
 				7F39082D2187D14F007BA344 /* AppDelegate.swift */,
 				7F3908312187D14F007BA344 /* Main.storyboard */,
 				7F3908342187D151007BA344 /* Assets.xcassets */,
 				7F3908362187D151007BA344 /* LaunchScreen.storyboard */,
 				7F3908392187D151007BA344 /* Info.plist */,
+				7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */,
 			);
 			path = pushuptracker;
 			sourceTree = "<group>";
@@ -71,6 +87,7 @@
 			children = (
 				7F39082F2187D14F007BA344 /* ViewController.swift */,
 				7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */,
+				7F35DF73219A5FDB00391EF5 /* HistoryTableViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -147,8 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */,
+				7F35DF72219A4EAC00391EF5 /* PersistenceManager.swift in Sources */,
+				7F35DF74219A5FDB00391EF5 /* HistoryTableViewController.swift in Sources */,
 				7F3908302187D14F007BA344 /* ViewController.swift in Sources */,
 				7F39082E2187D14F007BA344 /* AppDelegate.swift in Sources */,
+				7F35DF6F219A4D1700391EF5 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
