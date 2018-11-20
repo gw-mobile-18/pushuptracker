@@ -17,6 +17,22 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func findGymsButtonPressed(_ sender: Any) {
+        
+        print("find gyms pressed")
+        performSegue(withIdentifier: "gymsSegue", sender: self)
+    }
+    
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        
+        let shareText = "Check out my pushup record: \(PersistenceManager.sharedInstance.fetchPushupRecord())!!!"
+        
+        let activityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

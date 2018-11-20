@@ -8,14 +8,8 @@
 
 import Foundation
 
-class Workout: Codable {
+struct Workout: Codable {
     let name: String
     let date: Date
     let pushupsCompleted:Int
-    
-    init(name: String, date: Date, pushupsCompleted: Int) {
-        self.name = name
-        self.date = date
-        self.pushupsCompleted = pushupsCompleted
-    }
 }

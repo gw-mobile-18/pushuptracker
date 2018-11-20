@@ -49,6 +49,9 @@
                                         <state key="normal" title="Find Gyms">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="findGymsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZJ-NB-rvF"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pushup Record: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-Ps-jMu">
                                         <rect key="frame" x="0.3333333333333286" y="347" width="169.33333333333337" height="49"/>
@@ -69,9 +72,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pushup Tracker" id="Yaw-pj-sPW"/>
+                    <navigationItem key="navigationItem" title="Pushup Tracker" id="Yaw-pj-sPW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="oCA-xQ-wgG">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="bJ9-Tk-j79"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pushupRecordLabel" destination="Mrr-Ps-jMu" id="ckj-aQ-DNZ"/>
+                        <segue destination="wTl-hq-8gO" kind="show" identifier="gymsSegue" id="Iwc-Eq-gkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,6 +159,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgm-nx-Hhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1577" y="-279"/>
+        </scene>
+        <!--Gyms Table View Controller-->
+        <scene sceneID="2cH-d0-iLW">
+            <objects>
+                <tableViewController id="wTl-hq-8gO" customClass="GymsTableViewController" customModule="pushuptracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bQg-SV-AaC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gymCell" id="lha-uc-Chb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lha-uc-Chb" id="hXp-iO-zOP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wTl-hq-8gO" id="oY1-Nc-95W"/>
+                            <outlet property="delegate" destination="wTl-hq-8gO" id="g5z-7s-XSN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UzS-lG-w0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="923"/>
         </scene>
         <!--History Table View Controller-->
         <scene sceneID="oGD-Kg-jjE">
