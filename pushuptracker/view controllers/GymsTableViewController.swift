@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class GymsTableViewController: UITableViewController {
     
@@ -21,6 +22,8 @@ class GymsTableViewController: UITableViewController {
 
         let fourquareAPIManager = FourSquareAPIManager()
         fourquareAPIManager.delegate = self
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         fourquareAPIManager.fetchGyms()
     }
 
@@ -33,7 +36,6 @@ class GymsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gyms.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gymCell", for: indexPath) as! GymTableViewCell
@@ -42,8 +44,11 @@ class GymsTableViewController: UITableViewController {
         
         cell.gymNameLabel.text = gym.name
         cell.gymAddressLabel.text = gym.address
-        //TODO: set the image
-
+        
+        if let iconUrlString = gym.iconUrl, let url = URL(string: iconUrlString) {
+            cell.gymLogoImage.load(url: url)
+        }
+        
         return cell
     }
 }
@@ -51,10 +56,19 @@ class GymsTableViewController: UITableViewController {
 extension GymsTableViewController: FetchGymsDelegate {
     func gymsFound(_ gyms: [Gym]) {
         print("gyms found - here they are in the controller!")
-        self.gyms = gyms
+        DispatchQueue.main.async {
+            self.gyms = gyms
+
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
     }
     
     func gymsNotFound() {
         print("no gyms found")
+        
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
+
     }
 }
