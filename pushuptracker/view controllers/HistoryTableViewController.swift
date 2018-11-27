@@ -27,7 +27,6 @@ class HistoryTableViewController: UITableViewController {
         return workouts.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
 

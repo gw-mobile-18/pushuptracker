@@ -38,7 +38,7 @@ class FourSquareAPIManager {
             print("request complete")
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("response is nil or 200")
+                print("response is nil or not 200")
                 
                 self.delegate?.gymsNotFound()
                 

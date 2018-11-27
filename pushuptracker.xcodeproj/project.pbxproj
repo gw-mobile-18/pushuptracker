@@ -11,6 +11,7 @@
 		7F3400BF21A38A9A00884DBA /* FourSquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400BE21A38A9A00884DBA /* FourSquareResponse.swift */; };
 		7F3400C221A38B5600884DBA /* FourSquareAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400C121A38B5600884DBA /* FourSquareAPIManager.swift */; };
 		7F3400C421A3905900884DBA /* GymsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400C321A3905900884DBA /* GymsTableViewController.swift */; };
+		7F3400C621ACC05E00884DBA /* GymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400C521ACC05E00884DBA /* GymTableViewCell.swift */; };
 		7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */; };
 		7F35DF6F219A4D1700391EF5 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF6E219A4D1700391EF5 /* Workout.swift */; };
 		7F35DF72219A4EAC00391EF5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */; };
@@ -27,6 +28,7 @@
 		7F3400BE21A38A9A00884DBA /* FourSquareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareResponse.swift; sourceTree = "<group>"; };
 		7F3400C121A38B5600884DBA /* FourSquareAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIManager.swift; sourceTree = "<group>"; };
 		7F3400C321A3905900884DBA /* GymsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsTableViewController.swift; sourceTree = "<group>"; };
+		7F3400C521ACC05E00884DBA /* GymTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTableViewCell.swift; sourceTree = "<group>"; };
 		7F35DF6B21911ED300391EF5 /* PushupTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushupTrackerViewController.swift; sourceTree = "<group>"; };
 		7F35DF6E219A4D1700391EF5 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				7FA434DC21911D1600724C7E /* view controllers */,
 				7F39082D2187D14F007BA344 /* AppDelegate.swift */,
 				7F3908312187D14F007BA344 /* Main.storyboard */,
+				7F3400C521ACC05E00884DBA /* GymTableViewCell.swift */,
 				7F3908342187D151007BA344 /* Assets.xcassets */,
 				7F3908362187D151007BA344 /* LaunchScreen.storyboard */,
 				7F3908392187D151007BA344 /* Info.plist */,
@@ -192,6 +195,7 @@
 				7F3400BD21A3895000884DBA /* Gym.swift in Sources */,
 				7F39082E2187D14F007BA344 /* AppDelegate.swift in Sources */,
 				7F35DF6F219A4D1700391EF5 /* Workout.swift in Sources */,
+				7F3400C621ACC05E00884DBA /* GymTableViewCell.swift in Sources */,
 				7F3400BF21A38A9A00884DBA /* FourSquareResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
