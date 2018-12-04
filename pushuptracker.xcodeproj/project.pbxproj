@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43CCC8C8163E536982166D42 /* Pods_pushuptracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD045217079B46395838AFB /* Pods_pushuptracker.framework */; };
+		7F1B8A0621B605C200980D34 /* LocationDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B8A0521B605C200980D34 /* LocationDetector.swift */; };
 		7F3400BD21A3895000884DBA /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400BC21A3895000884DBA /* Gym.swift */; };
 		7F3400BF21A38A9A00884DBA /* FourSquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400BE21A38A9A00884DBA /* FourSquareResponse.swift */; };
 		7F3400C221A38B5600884DBA /* FourSquareAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3400C121A38B5600884DBA /* FourSquareAPIManager.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F1B8A0521B605C200980D34 /* LocationDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetector.swift; sourceTree = "<group>"; };
 		7F3400BC21A3895000884DBA /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		7F3400BE21A38A9A00884DBA /* FourSquareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareResponse.swift; sourceTree = "<group>"; };
 		7F3400C121A38B5600884DBA /* FourSquareAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIManager.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				7F35DF71219A4EAC00391EF5 /* PersistenceManager.swift */,
 				7F3400C121A38B5600884DBA /* FourSquareAPIManager.swift */,
+				7F1B8A0521B605C200980D34 /* LocationDetector.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1B8A0621B605C200980D34 /* LocationDetector.swift in Sources */,
 				7F35DF6C21911ED300391EF5 /* PushupTrackerViewController.swift in Sources */,
 				7F3400C421A3905900884DBA /* GymsTableViewController.swift in Sources */,
 				7F35DF72219A4EAC00391EF5 /* PersistenceManager.swift in Sources */,

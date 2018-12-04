@@ -10,21 +10,28 @@ import Foundation
 
 protocol FetchGymsDelegate {
     func gymsFound(_ gyms: [Gym])
-    func gymsNotFound()
+    func gymsNotFound(reason: FourSquareAPIManager.FailureReason)
 }
 
 class FourSquareAPIManager {
     
+    enum FailureReason: String {
+        case noResponse = "No response received" //allow the user to try again
+        case non200Response = "Bad response" //give up
+        case noData = "No data recieved" //give up
+        case badData = "Bad data" //give up
+    }
+    
     var delegate: FetchGymsDelegate?
     
-    func fetchGyms() {
+    func fetchGyms(latitude: Double, longitude: Double) {
         var urlComponents = URLComponents(string: "https://api.foursquare.com/v2/venues/search")!
         
         urlComponents.queryItems = [
             URLQueryItem(name: "client_secret", value: "H20WAGEG5C2YIIP2QJG0CDNMZQ0O0YBECFTUY4ADZQKQCQUS"),
             URLQueryItem(name: "client_id", value: "KUS3LGMRRJVOP14XPVSVHPHZ5HA00AT40FTIEBSYMWTET40F"),
             URLQueryItem(name: "v", value: "20181119"),
-            URLQueryItem(name: "ll", value: "38.900140,-77.049447"),
+            URLQueryItem(name: "ll", value: "\(latitude), \(longitude)"),
             URLQueryItem(name: "query", value: "gym")
         ]
         
@@ -35,12 +42,16 @@ class FourSquareAPIManager {
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             //PUT CODE HERE TO RUN UPON COMPLETION
-            print("request complete")
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("response is nil or not 200")
+            guard let response = response as? HTTPURLResponse else {
                 
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .noResponse)
+                
+                return
+            }
+            
+            guard response.statusCode == 200 else {
+                self.delegate?.gymsNotFound(reason: .non200Response)
                 
                 return
             }
@@ -48,9 +59,7 @@ class FourSquareAPIManager {
             //HERE - response is NOT nil and IS 200
             
             guard let data = data else {
-                print("data is nil")
-                
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .noData)
                 
                 return
             }
@@ -84,17 +93,14 @@ class FourSquareAPIManager {
                 }
                 
                 //now what do we do with the gyms????
-                print(gyms)
-                
                 self.delegate?.gymsFound(gyms)
                 
                 
             } catch let error {
                 //if we get here, need to set a breakpoint and inspect the error to see where there is a mismatch between JSON and our Codable model structs
-                print("codable failed - bad data format")
                 print(error.localizedDescription)
                 
-                self.delegate?.gymsNotFound()
+                self.delegate?.gymsNotFound(reason: .badData)
             }
         }
         

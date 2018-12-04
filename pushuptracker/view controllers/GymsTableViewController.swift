@@ -10,7 +10,9 @@ import UIKit
 import MBProgressHUD
 
 class GymsTableViewController: UITableViewController {
-    
+    let foursquareAPIManager = FourSquareAPIManager()
+    let locationDetector = LocationDetector()
+
     var gyms = [Gym]() {
         didSet {
             tableView.reloadData()
@@ -20,11 +22,15 @@ class GymsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let fourquareAPIManager = FourSquareAPIManager()
-        fourquareAPIManager.delegate = self
-        MBProgressHUD.showAdded(to: self.view, animated: true)
+        foursquareAPIManager.delegate = self
+        locationDetector.delegate = self
         
-        fourquareAPIManager.fetchGyms()
+        fetchGyms()
+    }
+    
+    private func fetchGyms() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        locationDetector.findLocation()
     }
 
     // MARK: - Table view data source
@@ -53,6 +59,21 @@ class GymsTableViewController: UITableViewController {
     }
 }
 
+extension GymsTableViewController: LocationDetectorDelegate {
+    func locationDetected(latitude: Double, longitude: Double) {
+        foursquareAPIManager.fetchGyms(latitude: latitude, longitude: longitude)
+    }
+    
+    func locationNotDetected() {
+        print("no location found :(")
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            //TODO: Show a AlertController with error
+        }
+    }
+}
+
 extension GymsTableViewController: FetchGymsDelegate {
     func gymsFound(_ gyms: [Gym]) {
         print("gyms found - here they are in the controller!")
@@ -63,11 +84,30 @@ extension GymsTableViewController: FetchGymsDelegate {
         }
     }
     
-    func gymsNotFound() {
-        print("no gyms found")
-        
+    func gymsNotFound(reason: FourSquareAPIManager.FailureReason) {
         DispatchQueue.main.async {
             MBProgressHUD.hide(for: self.view, animated: true)
+            
+            let alertController = UIAlertController(title: "Problem fetching gyms", message: reason.rawValue, preferredStyle: .alert)
+            
+            switch(reason) {
+            case .noResponse:
+                let retryAction = UIAlertAction(title: "Retry", style: .default, handler: { (action) in
+                    self.fetchGyms()
+                })
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler:nil)
+                
+                alertController.addAction(cancelAction)
+                alertController.addAction(retryAction)
+                
+            case .non200Response, .noData, .badData:
+                let okayAction = UIAlertAction(title: "Okay", style: .default, handler:nil)
+                
+                alertController.addAction(okayAction)
+            }
+            
+            self.present(alertController, animated: true, completion: nil)
         }
 
     }
